@@ -1,0 +1,48 @@
+{% extends 'base-db-donor.html' %}
+{% load static %}
+{% block main %}
+<div class="container mt-5 vh-100 table-responsive">
+    <h3>Donate Now</h3>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12 p-2">
+            <div class="form-group">
+                <label>Donation Name <span style = "color : red">(Note :  If u select other , plz mention detail in description field )</span></label>
+                <select name="donationname"  class="form-control">
+                    <option value="Food Donation">Food Donation</option>
+                    <option value="Cloth Donation">Cloth Donation</option>
+                    <option value="Footwear Donation">Footwear Donation</option>
+                    <option value="Books Donation">Books Donation</option>
+                    <option value="Furniture Donation">Furniture Donation</option>
+                    <option value="Vessel Donation">Vessel Donation</option>
+                     <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-sm-12 p-2">
+            <div class="form-group">
+                <label>Donation Image(Pic of Items u want to donate)</label>
+                <input type="file" name="donationpic" class="form-control" >
+            </div>
+        </div>
+
+        <div class="col-sm-12 p-2">
+            <div class="form-group">
+                <label>Donation Collection Address</label>
+                <textarea name="collectionloc"  class="form-control" placeholder="Enter Full Address"></textarea>
+            </div>
+        </div>
+
+        <div class="col-sm-12 p-2">
+            <div class="form-group">
+                <label>Description(Special Note)</label>
+                <textarea name="description" class="form-control" placeholder="Special note for donation"></textarea>
+            </div>
+        </div>
+
+    
+    <input type="submit" value="Donate Happiness" class="m-2 px-3 btn btn-danger">
+</div>
+  </div>
+{% endblock main %}
